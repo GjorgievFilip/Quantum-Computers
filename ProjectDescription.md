@@ -12,7 +12,7 @@ Space
 ## Ausgangssituation / Problemstellung / Vorgeschichte  
 
 ### Englisch:
-Spacer is tipically a topic of general interest among People.
+Space is tipically a topic of general interest among People.
 It´s alo a mutual topic of interest ofours.
 
 
@@ -22,10 +22,10 @@ It´s alo a mutual topic of interest ofours.
 
 ### Englisch:
 **Project Goals:**  
-Enlighten the reciver vith a website about space spiking his interest on that topic.
+Enlighten the receiver vith a website about space spiking his interest on that topic.
 
 **Non-Goals:**  
-Make the website a gimmiky clump of coode no one really understands.
+Make the website a gimmiky clump of code no one really understands.
 
 ---
 
@@ -39,7 +39,7 @@ Creatin a Generic Website with space info and its corresponding parts (CSS and H
 ## Kritische Erfolgsfaktoren / Critical Success Factors  
 
 ### Englisch:
-A compound Programming expirience of both members.
+A compound Programming experience of both members.
 
 ---
 
