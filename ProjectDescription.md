@@ -4,15 +4,15 @@
 **Jesús Dávila**
 
 **Englisch:**  
-Space
+Quantum Computers
 
 ---
 
 ## Ausgangssituation / Problemstellung / Vorgeschichte
 
 ### Englisch:
-Space is typically a topic of general interest among people.  
-It’s also a mutual topic of interest of ours.
+Quantum computers are computers that have processors, which use quantum mechanics to work with data.
+They are typically faster and stronger than normal computers. However, our science is still in it's early stages, so quantum computers are expensive and reserved for large institutes. It is expected that we will have to work in the future with them.
 
 ---
 
@@ -21,17 +21,17 @@ It’s also a mutual topic of interest of ours.
 ### Englisch:
 
 **Project Goals:**  
-Enlighten the receiver with a website about space, sparking his interest in that topic.
+Enlighten the user with a website containing understandable descriptions about quantum computing, pros, cons, security and uses.
 
 **Non-Goals:**  
-Make the website a gimmicky clump of code no one really understands.
+Spam the user with a lot of animations, because that will annoy the user and make them leave.
 
 ---
 
 ## Projektinhalte / Project Contents
 
 ### Englisch:
-Creating a generic website with space info and its corresponding parts (CSS and HTML).
+Creating a generic website with quantum computing and its corresponding parts (CSS and HTML). The website will have small animations for hovering over links or simple tweening, but no complicated animations.
 
 ---
 
@@ -44,19 +44,6 @@ A compound programming experience of both members.
 
 ## Termine / Milestones
 
-### Deutsch:
-**Projektstart:**  
-- Ereignis: Was den Projektbeginn markiert (z.B. Kick-off Meeting) => UNTERRICHT  
-- Termin: Datum des Starts
-
-**Projektende:**  
-- Ereignis: Was das Projektende definiert (z.B. Abnahme durch Kunden) => ABGABE  
-- Termin: Abschlussdatum
-
-**Meilensteine:**  
-Wichtige Zwischenereignisse und ihre Termine.
-
----
 
 ### Englisch:
 **Project Start:**  
