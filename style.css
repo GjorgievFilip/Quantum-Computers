@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5
     padding: 2px;
     margin: 2px;
     font-size: 200%;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.45);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
  
@@ -65,11 +66,19 @@ p
 }
 
 /* ANCHORS */
+#mainPage, #mainPage:visited, #mainPage:hover
+{
+    color: #93d9ff76;
+    font-size:220%;
+    font-weight: bold;
+}
+
 a, a:visited {
     color: #66a2be;
     transition: font-size 0.5s ease, color 0.5s ease;
     font-size: 135%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.35);
     text-decoration: none;
 }
 
@@ -83,6 +92,32 @@ a.current, a.current:visited {
     color: #66a2be;
     transition: font-size 0.5s ease, color 0.5s ease;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0 4px 8px rgba(0,0,0,0.35);
     font-size: 135%;
     text-decoration: underline;
+}
+
+.gallery
+{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));
+    padding: 15px;
+}
+
+.shadow-1-strong { box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3); }
+
+.gallery img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery img:hover
+{
+    transform: scale(1.05);
 }
