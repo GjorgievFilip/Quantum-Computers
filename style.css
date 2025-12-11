@@ -1,11 +1,11 @@
-body
-{
+
+body{
     background: linear-gradient(90deg, rgb(16, 8, 58) 0%, rgb(12, 16, 29)100%);
     color: #00e5ff;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* NAVIGATION */
+
 header
 {
     background-color: #070b1baf;
@@ -33,7 +33,6 @@ nav
     gap: 0.4rem;
 }
 
-/* BODY */
 section
 {
     background-color: #1a2653af;
@@ -45,8 +44,6 @@ article
 {
     background-color: #293778af;
 }
-
-/* TEXT */
 h1, h2, h3, h4, h5
 {
     color: #93d9ff76;
@@ -79,7 +76,7 @@ p
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* ANCHORS */
+
 #mainPage, #mainPage:visited, #mainPage:hover
 {
     color: #93d9ff76;
@@ -114,8 +111,8 @@ a.current, a.current:visited {
 .gallery
 {
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 0.9fr));
+    gap: 1.5rem;    
+    grid-template-columns: repeat(auto-fit, minmax(350px, 0.9fr));
     padding: 15px;
 }
 
@@ -135,3 +132,4 @@ a.current, a.current:visited {
 {
     transform: scale(1.05);
 }
+
