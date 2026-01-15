@@ -1,26 +1,95 @@
 <!DOCTYPE html>
-<html lang="de">
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Quantum Computer</title>
-        <link rel="stylesheet" href="BootstrapCSS/bootstrap.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="border-bottom">
-            <img src="images/atomic.png" height="70px" alt="image">
-            <a href ="index.html" id="mainPage" class="shadow-1-strong">Quantum Computers</a>
-            <img src="images/atomic.png" height="70px" alt="image">
-            <nav><a href="power.html">Power</a> <br>
-                <a href="security.html" class="current shadow-1-strong" target="_self">Security</a> <br>
-                <a href="gallery.html">Gallery</a> <br>
-                <a href="applications.html">Applications</a> <br>
-                <a href="models.html">Models</a>
-            </nav>
-        </header>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Quantum Computer - Security</title>
+    <link rel="stylesheet" href="BootstrapCSS/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <main>
-            
-        </main>
-    </body>
+<header class="border-bottom">
+    <img src="images/atomic.png" height="70px" alt="atomic symbol">
+    <a href="index.html" id="mainPage" class="shadow-1-strong">Quantum Computers</a>
+    <img src="images/atomic.png" height="70px" alt="atomic symbol">
+
+    <nav>
+        <a href="power.html">Power</a>
+        <a href="security.html" class="current shadow-1-strong">Security</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="applications.html">Applications</a>
+        <a href="models.html">Models</a>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h1>Security & Quantum Computing</h1>
+        <p>
+            Quantum computers represent a serious challenge to modern cybersecurity.
+            Many encryption systems used today rely on problems that are difficult
+            for classical computers but could be efficiently solved by quantum machines.
+        </p>
+    </section>
+
+    <section>
+        <h2>Threat to Modern Encryption</h2>
+        <p>
+            Popular encryption algorithms such as <strong>RSA</strong> and
+            <strong>Elliptic Curve Cryptography (ECC)</strong> are based on mathematical
+            problems like integer factorization.
+            Using <em>Shor´s algorithm</em>, a sufficiently powerful quantum computer
+            could break these systems.
+        </p>
+    </section>
+
+    <section>
+        <h2>Post-Quantum Cryptography</h2>
+        <p>
+            To protect data in the future, researchers are developing
+            <strong>post-quantum cryptographic algorithms</strong>.
+            These methods are designed to remain secure even against quantum attacks.
+        </p>
+        <ul>
+            <li>Lattice-based cryptography</li>
+            <li>Hash-based digital signatures</li>
+            <li>Code-based encryption techniques</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Quantum Key Distribution (QKD)</h2>
+        <p>
+            Quantum Key Distribution uses the laws of quantum mechanics
+            to securely exchange encryption keys.
+            Any attempt to intercept the communication changes the quantum state
+            and can be detected immediately.
+        </p>
+    </section>
+
+    <section>
+        <h2>Further Reading</h2>
+        <ul>
+            <li>
+                <a href="https://www.ibm.com/quantum/learn/quantum-computing-security" target="_blank">
+                    IBM - Quantum Computing & Security
+                </a>
+            </li>
+            <li>
+                <a href="https://www.nist.gov/pqcrypto" target="_blank">
+                    NIST - Post-Quantum Cryptography
+                </a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Quantum_cryptography" target="_blank">
+                    Wikipedia - Quantum Cryptography
+                </a>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+</body>
 </html>
