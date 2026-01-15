@@ -33,8 +33,6 @@ nav
 
 section
 {
-    background-color: #1a2653af;
-    margin-top: 15px;
     padding: 5px;
 }
 
@@ -80,7 +78,6 @@ a, a:visited {
     transition: font-size 0.5s ease, color 0.5s ease;
     font-size: 135%;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.35);
     text-decoration: none;
 }
 
@@ -102,7 +99,6 @@ a.current, a.current:visited {
     color: #66a2be;
     transition: font-size 0.5s ease, color 0.5s ease;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-shadow: 0 4px 8px rgba(0,0,0,0.35);
     font-size: 135%;
     text-decoration: underline;
 }
