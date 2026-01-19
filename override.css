@@ -1,0 +1,8 @@
+:root
+{
+    --bs-primary: #08172d;
+    --bs-secondary: #2c5578;
+    --bs-primary-rgb: rgb(22, 35, 104);
+    --bs-secondary-rgb: rgb(10, 11, 90);
+    --bs-gradient: linear-gradient(180deg, rgba(15, 34, 101, 0.692), rgba(0, 0, 0, 0.454));
+}
