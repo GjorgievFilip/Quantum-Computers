@@ -1,3 +1,4 @@
+/*This file is only intended for style changes with bootstrap classes*/
 :root
 {
     --bs-primary: #08172d;
@@ -5,4 +6,19 @@
     --bs-primary-rgb: rgb(22, 35, 104);
     --bs-secondary-rgb: rgb(10, 11, 90);
     --bs-gradient: linear-gradient(180deg, rgba(15, 34, 101, 0.692), rgba(0, 0, 0, 0.454));
+    --bs-nav-tabs-link-hover-border-color: rgb(255, 255, 255);
+
+}
+
+.navbar .nav-link {
+  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  gap: 2rem;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  border-bottom-color: currentColor;
+  background-color: rgba(110, 106, 106, 0.087);
 }
