@@ -1,24 +1,56 @@
 /*This file is only intended for style changes with bootstrap classes*/
 :root
 {
-    --bs-primary: #08172d;
-    --bs-secondary: #2c5578;
-    --bs-primary-rgb: rgb(22, 35, 104);
-    --bs-secondary-rgb: rgb(10, 11, 90);
-    --bs-gradient: linear-gradient(180deg, rgba(15, 34, 101, 0.692), rgba(0, 0, 0, 0.454));
-    --bs-nav-tabs-link-hover-border-color: rgb(255, 255, 255);
-
+    --bs-primary: #020913;
+    --bs-secondary: #071e31;
+    --bs-primary-rgb: rgb(11, 15, 30);
+    --bs-secondary-rgb: rgb(11, 12, 96);
+    --bs-gradient: linear-gradient(180deg, rgba(21, 28, 51, 0.692), rgba(0, 0, 0, 0.454));
+    --bs-dark-rgb: rgb(10, 11, 90);
+    --bg-nat: rgb(4, 10, 74);
 }
 
 .navbar .nav-link {
   border-bottom: 2px solid transparent;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 2.5;
   gap: 2rem;
+  background-color: #09010f;
+  padding: 0px;
+  height: 45px;
 }
 
-.navbar .nav-link.active,
+.nav-link
+{
+  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.navbar
+{
+  --bs-navbar-padding-y: 0px;
+  background-color: #09010f;
+}
+.navbar-nav
+{
+    background-color: #09010f;
+  margin: 0px;
+  height: 100%;
+  padding: 0px;
+}
+
 .navbar .nav-link:hover {
   border-bottom-color: currentColor;
-  background-color: rgba(110, 106, 106, 0.087);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar .nav-link.active
+{
+  border-bottom-color: currentColor;
+  background-color: #09010fb3;
+}
+
+.nav-item
+{
+  justify-content: center;
 }
