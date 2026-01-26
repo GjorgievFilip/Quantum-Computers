@@ -2,19 +2,24 @@
 body{
     background: linear-gradient(90deg, rgb(101, 88, 166) 0%, rgb(82, 108, 194)100%);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0px;
-    padding: 0px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-html
+main {
+  flex: 1;
+}
+
+html, body
 {
-    margin: 0px;
-    padding: 0px;
+    height: 100%;
+    margin: 0;
 }
 
 header
 {
-    color: #81abb8a8;
+    color: #11313b5c;
     width: 101vw;
     margin: 0px;
     left: 0;
@@ -28,12 +33,13 @@ header
 
 footer
 {
-    background-color: #386c96;
+    background-color: #6c9dc55c;
     color: #00fff2;
     text-align: center;
     padding: 350px 0;
     margin-top: 20px;
     font-size: 90%;
+    
 }
 
 section
