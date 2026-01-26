@@ -1,6 +1,6 @@
 /* Elements */
 body{
-    background: linear-gradient(90deg, rgb(16, 8, 58) 0%, rgb(12, 16, 29)100%);
+    background: linear-gradient(90deg, rgb(101, 88, 166) 0%, rgb(82, 108, 194)100%);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -37,11 +37,11 @@ article
 
 h1, h2, h3, h4, h5
 {
-    color: #93d9ff76;
+    color: #05283b;
     padding: 2px;
     margin: 2px;
     text-shadow: 0 4px 8px rgba(0,0,0,0.45);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 h1
@@ -63,7 +63,7 @@ p
 {
     padding: 2px;
     font-size: 135%;
-    color:#7faec4;
+    color:#212a5b;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 

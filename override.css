@@ -1,11 +1,14 @@
 /*This file is only intended for style changes with bootstrap classes*/
 :root
 {
-    --bs-primary: #020913;
+    --bs-primary:  #6183b3;
     --bs-secondary: #071e31;
-    --bs-primary-rgb: 11, 15, 30;
+    --bs-primary-rgb: 97, 131, 179;
     --bs-secondary-rgb: 2, 3, 30;
-    --bs-gradient: linear-gradient(180deg, rgba(21, 28, 51, 0.692), rgba(0, 0, 0, 0.454));
+
+    --bs-border-color: #2d2b69;
+    --bs-border-width: 2px;
+    --bs-gradient: linear-gradient(180deg, rgba(113, 128, 179, 0.692), rgba(164, 147, 193, 0.146));
 }
 
 .navbar .nav-link {
