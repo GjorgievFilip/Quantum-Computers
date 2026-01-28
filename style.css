@@ -109,3 +109,9 @@ p
 {
     transform: scale(1.05);
 }
+
+#header
+{
+    color: aliceblue;
+    font-size: 400%;
+}
