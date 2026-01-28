@@ -124,10 +124,17 @@ p
     position: absolute;
 }
 
-.hero
+.background-img
 {
-  background-image: url("images/googleProcessor.jpg");
   background-size: cover;       /* fill container */
   background-position: center;  /* keep image centered */
   background-repeat: no-repeat;
+}
+
+#img-index
+{
+    background-image: url(images/quantum.jpg);
+    background-size: cover;       /* fill container */
+    background-position: center;  /* keep image centered */
+    background-repeat: no-repeat;
 }
