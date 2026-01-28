@@ -36,7 +36,7 @@ footer
     background-color: #6c9dc55c;
     color: #00fff2;
     text-align: center;
-    padding: 350px 0;
+    padding: 35px 0;
     margin-top: 20px;
     font-size: 90%;
     
@@ -113,5 +113,21 @@ p
 #header
 {
     color: aliceblue;
-    font-size: 400%;
+    font-size: 1050%;
+    position: relative;
+}
+
+
+.behind-image
+{
+    z-index: -1;
+    position: absolute;
+}
+
+.hero
+{
+  background-image: url("images/googleProcessor.jpg");
+  background-size: cover;       /* fill container */
+  background-position: center;  /* keep image centered */
+  background-repeat: no-repeat;
 }
