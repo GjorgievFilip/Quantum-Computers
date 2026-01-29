@@ -6,6 +6,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color:#d8d9de;
 }
 
 main {
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5
 
 h1
 {
-    font-size: 200%;
+    font-size: 300%;
 }
 
 h2
