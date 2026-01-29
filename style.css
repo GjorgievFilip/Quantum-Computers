@@ -1,6 +1,7 @@
 /* Elements */
 body{
-    background: linear-gradient(90deg, rgb(101, 88, 166) 0%, rgb(82, 108, 194)100%);
+   /* background: linear-gradient(90deg, rgb(101, 88, 166) 0%, rgb(82, 108, 194)100%);*/
+   background-color: #2c030a;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -33,7 +34,7 @@ header
 
 footer
 {
-    background-color: #6c9dc55c;
+    background-color: #240308;
     color: #00fff2;
     text-align: center;
     padding: 35px 0;
@@ -54,7 +55,7 @@ article
 
 h1, h2, h3, h4, h5
 {
-    color: #05283b;
+    color: #ebeeef;
     padding: 2px;
     margin: 2px;
     text-shadow: 0 4px 8px rgba(0,0,0,0.45);
@@ -79,8 +80,8 @@ h3
 p
 {
     padding: 2px;
-    font-size: 135%;
-    color:#212a5b;
+    font-size: 155%;
+    color:#d8d9de;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -105,6 +106,16 @@ p
     transition: transform 0.5s ease;
 }
 
+.img-hover
+{
+     transition: transform 0.7s ease;
+}
+
+.img-hover:hover
+{
+transform: scale(1.03)
+}
+
 .gallery img:hover
 {
     transform: scale(1.05);
@@ -112,29 +123,17 @@ p
 
 #header
 {
-    color: aliceblue;
+    color: rgb(255, 255, 254);
     font-size: 1050%;
     position: relative;
 }
 
-
-.behind-image
+#mainDiv
 {
-    z-index: -1;
-    position: absolute;
+    box-shadow: 5px 5px 20px 5px rgba(24, 1, 1, 0.719) inset;
 }
 
-.background-img
+#title
 {
-  background-size: cover;       /* fill container */
-  background-position: center;  /* keep image centered */
-  background-repeat: no-repeat;
-}
-
-#img-index
-{
-    background-image: url(images/quantum.jpg);
-    background-size: cover;       /* fill container */
-    background-position: center;  /* keep image centered */
-    background-repeat: no-repeat;
+    background-color: #200308;
 }

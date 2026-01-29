@@ -1,12 +1,12 @@
 /*This file is only intended for style changes with bootstrap classes*/
 :root
 {
-    --bs-primary:  #6183b3;
-    --bs-secondary: #071e31;
-    --bs-primary-rgb: 97, 131, 179;
-    --bs-secondary-rgb: 2, 3, 30;
+    --bs-primary:  #521d29;
+    --bs-secondary: #31070b;
+    --bs-primary-rgb: 49, 14, 22;
+    --bs-secondary-rgb: 55, 1, 15;
 
-    --bs-border-color: #2d2b69;
+    --bs-border-color: #260f12;
     --bs-border-width: 2px;
     --bs-gradient: linear-gradient(180deg, rgba(113, 128, 179, 0.692), rgba(164, 147, 193, 0.146));
 }
@@ -16,7 +16,7 @@
   font-size: 1rem;
   line-height: 2.5;
   gap: 2rem;
-  background-color: #09010f;
+  background-color: #0f0101;
   padding: 0px;
   height: 45px;
 }
@@ -30,11 +30,11 @@
 .navbar
 {
   --bs-navbar-padding-y: 0px;
-  background-color: #09010f;
+  background-color: #0f0101;
 }
 .navbar-nav
 {
-    background-color: #09010f;
+    background-color: #0f0101;
   margin: 0px;
   height: 100%;
   padding: 0px;
@@ -48,10 +48,16 @@
 .navbar .nav-link.active
 {
   border-bottom-color: currentColor;
-  background-color: #09010fb3;
+  background-color: #ffffff0a;
 }
 
 .nav-item
 {
   justify-content: center;
 }
+
+/*.container-fluid
+{
+  background-image: url('images/halftone.png');
+  background-blend-mode: lighten;
+}*/
