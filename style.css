@@ -134,6 +134,16 @@ transform: scale(1.03)
     height: 50%;
 }
 
+.height-67
+{
+    height: 67%;
+}
+
+.height-33
+{
+    height: 33%;
+}
+
 .frosted {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);

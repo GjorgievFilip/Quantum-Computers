@@ -4,7 +4,7 @@
     --bs-primary:  #f4ebed;
     --bs-secondary: #706f6f;
     --bs-primary-rgb: 220, 220, 220;
-    --bs-secondary-rgb: 150, 150, 150;
+    --bs-secondary-rgb: 195, 195, 195;
     --bs-border-width: 2px;
 }
 
@@ -52,4 +52,10 @@
 .nav-item
 {
   justify-content: center;
+}
+
+.row
+{
+      --bs-gutter-x: 0rem;
+      --bs-gutter-y: 0rem;
 }
