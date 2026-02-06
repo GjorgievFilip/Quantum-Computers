@@ -172,3 +172,16 @@ IMAGES
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.img-german
+{
+  background-image: url('images/deutschland.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.max-width-50
+{
+    max-width: 50%;
+}

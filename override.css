@@ -56,6 +56,12 @@
 
 .row
 {
-      --bs-gutter-x: 0rem;
-      --bs-gutter-y: 0rem;
+  --bs-gutter-x: 0rem;
+  --bs-gutter-y: 0rem;
+}
+
+.col
+{
+  overflow: hidden;
+  overflow-wrap: break-word;
 }
