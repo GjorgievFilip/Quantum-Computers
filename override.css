@@ -6,6 +6,7 @@
     --bs-primary-rgb: 220, 220, 220;
     --bs-secondary-rgb: 205, 205, 205;
     --bs-border-width: 2px;
+    --bs-body-bg: 220, 220, 200;
 }
 
 .navbar .nav-link {
