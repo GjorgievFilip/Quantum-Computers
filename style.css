@@ -181,6 +181,14 @@ IMAGES
   background-repeat: no-repeat;
 }
 
+.img-greyWall
+{
+  background-image: url('images/greyWall.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
