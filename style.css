@@ -40,7 +40,10 @@ p
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+.bg-tertiary
+{
+    background-color: #28282B;
+}
 .gallery
 {
     display: grid;
@@ -106,6 +109,11 @@ transform: scale(1.03)
 .height-lg
 {
     height: 450px;
+}
+
+.height-mini
+{
+    height: 50px;
 }
 
 .height-sm
