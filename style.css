@@ -32,6 +32,7 @@ h2
 {
     font-size: 250%;
 }
+
 p
 {
     padding: 2px;
@@ -104,6 +105,11 @@ transform: scale(1.03)
 .height-xxl
 {
     height: 600px;
+}
+
+.height-lg-xxl
+{
+    height: 525px;
 }
 
 .height-lg
