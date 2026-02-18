@@ -18,6 +18,7 @@
   padding: 0px;
   height: 45px;
   color: rgb(40, 40, 43);
+  transition: background-color 0.15s;
 }
 
 .nav-link
