@@ -21,17 +21,18 @@ They are typically faster and stronger than normal computers. However, our scien
 ### Englisch:
 
 **Project Goals:**  
-Enlighten the user with a website containing understandable descriptions about quantum computing, pros, cons, security and uses.
+Enlighten the user with a website containing understandable descriptions and interactions about quantum computing, pros, cons, security and uses.
 
 **Non-Goals:**  
 Spam the user with a lot of animations, because that will annoy the user and make them leave.
-
+Horrible colors
 ---
 
 ## Projektinhalte / Project Contents
 
 ### Englisch:
 Creating a generic website with quantum computing and its corresponding parts (CSS and HTML). The website will have small animations for hovering over links or simple tweening, but no complicated animations.
+We plan for each page to have a small bit of functionality relating to it's themes, like for example the cybersecurity page having a password tester that will test how fast a quantum computer could crack a password. This would keep the user curious and would give them an incentive to explore the website.
 
 ---
 
