@@ -22,10 +22,11 @@ They are typically faster and stronger than normal computers. However, our scien
 
 **Project Goals:**  
 Enlighten the user with a website containing understandable descriptions and interactions about quantum computing, pros, cons, security and uses.
+Develop a clean and safe backend that sanitizes the user's input.
 
 **Non-Goals:**  
 Spam the user with a lot of animations, because that will annoy the user and make them leave.
-Horrible colors
+Horrible colors or low quality images.
 ---
 
 ## Projektinhalte / Project Contents
@@ -40,6 +41,7 @@ We plan for each page to have a small bit of functionality relating to it's them
 
 ### Englisch:
 A compound programming experience of both members.
+Usage of HTML, CSS, Bootstrap and JavaScript is REQUIRED!
 
 ---
 
