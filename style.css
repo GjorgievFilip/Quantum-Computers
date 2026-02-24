@@ -203,6 +203,14 @@ IMAGES
   background-repeat: no-repeat;
 }
 
+.img-shematicQubit1
+{
+  background-image: url('images/shematicQubit.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
