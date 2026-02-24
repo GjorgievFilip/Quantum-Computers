@@ -203,9 +203,17 @@ IMAGES
   background-repeat: no-repeat;
 }
 
-.img-shematicQubit1
+.img-shematicQubit
 {
-  background-image: url('images/shematicQubit.png');
+  background-image: url('images/shematicQubit.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-superpositioningQB
+{
+  background-image: url('images/superpositioningQB.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
