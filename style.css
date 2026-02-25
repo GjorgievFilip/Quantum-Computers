@@ -8,10 +8,6 @@ body{
     color:#28282B;
 }
 
-main {
-  flex: 1;
-}
-
 footer
 {
     background-color: #777777;
@@ -45,6 +41,7 @@ p
 {
     background-color: #bcbcbe;
 }
+
 .gallery
 {
     display: grid;
@@ -83,23 +80,6 @@ transform: scale(1.03)
 .text-color-white
 {
     color:rgba(245, 245, 245, 0.95)
-}
-
-#header
-{
-    color: rgb(255, 255, 254);
-    font-size: 550%;
-    position: relative;
-}
-
-#mainDiv
-{
-    box-shadow: 5px 5px 20px 5px rgba(24, 1, 1, 0.719) inset;
-}
-
-#title
-{
-    background-color: #200308;
 }
 
 .height-xxl
