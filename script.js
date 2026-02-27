@@ -46,30 +46,30 @@ if (path.endsWith("index.html"))
 
 if (path.endsWith("applications.html"))
 {
-    IndexPage();
+    ApplicationsPage();
 }
 
 if (path.endsWith("power.html"))
 {
-    IndexPage();
+    PowerPage();
 }
 
 if (path.endsWith("security.html"))
 {
-    IndexPage();
+    SecurityPage();
 }
 
 if (path.endsWith("ai.html"))
 {
-    IndexPage();
+    ArtificalIntelligencePage();
 }
 
 if (path.endsWith("models.html"))
 {
-    IndexPage();
+    ModelsPage();
 }
 
 if (path.endsWith("gallery.html"))
 {
-    IndexPage();
+    GalleryPage();
 }
