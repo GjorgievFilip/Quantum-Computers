@@ -303,6 +303,14 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-quantumMechanics
+{
+    background-image: url('images/quantumMechanic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
