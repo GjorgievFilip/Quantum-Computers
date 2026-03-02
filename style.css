@@ -279,6 +279,30 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-postQuantum
+{
+    background-image: url('images/postQuantum.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-quantumResilient
+{
+    background-image: url('images/quantumResilient.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-randomNumber
+{
+    background-image: url('images/randomNumber.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
