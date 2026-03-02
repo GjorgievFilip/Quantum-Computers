@@ -311,6 +311,14 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-cyberBanner
+{
+    background-image: url('images/cyberBanner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
