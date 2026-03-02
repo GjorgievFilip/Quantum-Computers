@@ -215,6 +215,30 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-stockMarket
+{
+    background-image: url('images/stockMarket.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-math
+{
+    background-image: url('images/math.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-medical
+{
+    background-image: url('images/medical.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
