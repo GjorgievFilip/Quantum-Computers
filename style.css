@@ -239,6 +239,30 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-mining
+{
+    background-image: url('images/mining.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-chemical
+{
+    background-image: url('images/chemical.jpg');
+    background-size: cover;
+    background-position: 95%;
+    background-repeat: no-repeat;
+}
+
+.img-cryptography
+{
+    background-image: url('images/cryptography.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
