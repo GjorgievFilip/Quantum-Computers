@@ -343,6 +343,30 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-superconductingComputer
+{
+    background-image: url('images/superconductingComputer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-ibm2
+{
+    background-image: url('images/ibmComputer1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-ibm1
+{
+    background-image: url('images/ibmComputer2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
