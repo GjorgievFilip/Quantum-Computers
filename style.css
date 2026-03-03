@@ -423,7 +423,7 @@ IMAGES
 {
     background-image: url('images/power.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
