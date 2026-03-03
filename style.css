@@ -375,6 +375,14 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-dWaveLogo
+{
+    background-image: url('images/dWaveLogo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .img-AQT
 {
     background-image: url('images/Logo-AQT.png');
