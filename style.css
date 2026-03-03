@@ -319,6 +319,30 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-complexity
+{
+    background-image: url('images/Complexity.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-limits
+{
+    background-image: url('images/limits.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-simulation
+{
+    background-image: url('images/Simulation.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
