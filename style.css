@@ -37,6 +37,10 @@ p
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.text-color-lightblue
+{
+    color: #0f1317;
+}
 .bg-tertiary
 {
     background-color: #bcbcbe;
@@ -394,6 +398,22 @@ IMAGES
 .img-IONQ
 {
     background-image: url('images/ionq-logo_465x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-ionTrap
+{
+    background-image: url('images/ionTrap.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-spinQ2
+{
+    background-image: url('images/spinQCastor.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
