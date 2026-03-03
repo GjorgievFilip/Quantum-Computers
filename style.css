@@ -399,6 +399,21 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.gradient-primary-secondary
+{
+    background: linear-gradient(to bottom, rgb(220, 220, 220) 0%, rgb(200, 200, 200) 100%);
+}
+
+.gradient-secondary-primary
+{
+    background: linear-gradient(to bottom, rgb(200, 200, 200) 0%, rgb(220, 220, 220) 100%);
+}
+
+.gradient-secondary-tertiary
+{
+    background: linear-gradient(to bottom, rgb(200, 200, 200) 0%, rgb(188, 188, 190) 100%);
+}
+
 .max-width-50
 {
     max-width: 50%;
