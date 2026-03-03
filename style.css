@@ -419,6 +419,14 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-power
+{
+    background-image: url('images/power.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .gradient-primary-secondary
 {
     background: linear-gradient(to bottom, rgb(220, 220, 220) 0%, rgb(200, 200, 200) 100%);
