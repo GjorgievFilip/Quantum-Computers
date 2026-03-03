@@ -11,20 +11,21 @@
 
 .navbar .nav-link {
   border-bottom: 2px solid;
-  font-size: 1rem;
+  font-size: 110%;
   line-height: 2.5;
   gap: 2rem;
   background-color: #cbcaca;
   padding: 0px;
-  height: 45px;
+  height: 50px;
   color: rgb(40, 40, 43);
   transition: background-color 0.15s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
 }
 
 .nav-link
 {
   border-bottom: 2px solid black;
-  font-size: 1rem;
 }
 
 .navbar
