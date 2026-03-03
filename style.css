@@ -375,6 +375,22 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-AQT
+{
+    background-image: url('images/Logo-AQT.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-IONQ
+{
+    background-image: url('images/ionq-logo_465x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .max-width-50
 {
     max-width: 50%;
