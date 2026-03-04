@@ -37,6 +37,11 @@ function GalleryPage()
 {
     console.log("Gallery Page");
 }
+
+function MemoryPage()
+{
+    console.log("Memory Page")
+}
 //Pages
 
 if (path.endsWith("index.html"))
@@ -72,4 +77,9 @@ if (path.endsWith("models.html"))
 if (path.endsWith("gallery.html"))
 {
     GalleryPage();
+}
+
+if (path.endsWith("memory.html"))
+{
+    MemoryPage();
 }
