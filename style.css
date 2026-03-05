@@ -427,6 +427,10 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+/*----------------------------------------------------------------------------------------------------------------------------
+IMAGES
+----------------------------------------------------------------------------------------------------------------------------*/
+
 .gradient-primary-secondary
 {
     background: linear-gradient(to bottom, rgb(220, 220, 220) 0%, rgb(200, 200, 200) 100%);
@@ -445,4 +449,14 @@ IMAGES
 .max-width-50
 {
     max-width: 50%;
+}
+
+.card
+{
+    width: 200px;
+    height: 200px;
+    background-color: #28282B;
+    border-radius: 200px;
+    border-color: #131314;
+    border-width: 5px;
 }
