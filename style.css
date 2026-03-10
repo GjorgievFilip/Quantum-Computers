@@ -460,3 +460,12 @@ IMAGES
     border-color: #131314;
     border-width: 5px;
 }
+
+#memoryGame
+{
+    width: 76%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    margin-bottom: 56px;
+}
