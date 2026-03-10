@@ -427,6 +427,14 @@ IMAGES
     background-repeat: no-repeat;
 }
 
+.img-DLR-Processor
+{
+    background-image: url('images/Quantenprozessor-mit-Ionenfallen-Technologie-Qudora-1024x576.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
 /*----------------------------------------------------------------------------------------------------------------------------
 IMAGES
 ----------------------------------------------------------------------------------------------------------------------------*/
