@@ -42,14 +42,7 @@ function MemoryPage()
 {
     console.log("Memory Page")
 
-    /*
-    The Idea:
 
-    Board of Qubits, each Qubit has 3 states within it.
-    Each of these states will be linked to a state with the same value in another qubit.
-    The job of the user will be to memorize which state was in which state card so that they could correctly link it to the other state card.
-    The purpose of this is to teach the concept of entanglement.
-    */
 }
 //Pages
 
