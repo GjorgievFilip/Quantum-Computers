@@ -42,7 +42,10 @@ function MemoryPage()
 {
     console.log("Memory Page")
 
+    const memoryGame = document.getElementById("memoryGame");
+    const buttons = memoryGame.querySelectorAll(".qubitGroup");
 
+    console.log(buttons.length);
 }
 //Pages
 
