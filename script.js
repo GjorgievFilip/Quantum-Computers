@@ -45,10 +45,10 @@ function MemoryPage()
     const memoryGame = document.getElementById("memoryGame");
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
 
-    function getUnassignedButtons(assignedButtons)
+    function GetUnassignedButtons(assignedButtons)
     {
-
-        let unAssignedButtons = [];
+        console.log('Execute');
+        let unassignedButtons = [];
 
         for (let i = 0; i < buttons.length; i++)
         {
@@ -67,25 +67,40 @@ function MemoryPage()
                 unassignedButtons.push(buttons[i]);
             }
         }
+
+        return unassignedButtons;
     }
 
+    function CreateGroupColors()
+    {
+        const upperColorLimit = 195;
+        const lowerColorLimit = 55;
+        const amountOfGroups = buttons.length / 3;
+        let groupColors = new Array(amountOfGroups);
 
-    const upperColorLimit = 195;
-    const lowerColorLimit = 55;
+        for (let i = 0; i < amountOfGroups; i++)
+        {
+            groupColors[i] = Math.random() * (upperColorLimit - lowerColorLimit) + lowerColorLimit;
+        }
 
-    const amountOfGroups = buttons.length / 3;
+        return groupColors;
+    }
 
+   
+
+    
+    const groupColors = CreateGroupColors();
     let assignedButtons = [];
-    let groupColors = new Array(amountOfGroups);
+    
+    console.log(groupColors);
 
-    for (let i = 0; i < amountOfGroups; i++)
+    for (let i = 0; i < buttons.length; i++)
     {
-        groupColors[i] = Math.random() * (upperColorLimit - lowerColorLimit) + lowerColorLimt
-    }
-
-    for (let i = 0; i < buttons.Length; i++)
-    {
-        var unassignedButtons = getUnassignedButtons(assignedButtons);
+        let unassignedButtons = GetUnassignedButtons(assignedButtons);
+        
+        let unassignedButton = unassignedButtons[Math.floor(Math.random() * unassignedButtons.length)]
+        assignedButtons.push(unassignedButton);
+        unassignedButton.style.backgroundColor = "lightBlue";
     }
 }
 //Pages
