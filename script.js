@@ -45,7 +45,48 @@ function MemoryPage()
     const memoryGame = document.getElementById("memoryGame");
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
 
-    console.log(buttons.length);
+    function getUnassignedButtons(assignedButtons)
+    {
+
+        let unAssignedButtons = [];
+
+        for (let i = 0; i < buttons.length; i++)
+        {
+            let inAssignedArray = false;
+
+            for (let j = 0; j < assignedButtons.length; j++)
+            {
+                if (assignedButtons[j] === buttons[i])
+                {
+                    inAssignedArray = true;
+                }
+            }
+
+            if (inAssignedArray === false)
+            {
+                unassignedButtons.push(buttons[i]);
+            }
+        }
+    }
+
+
+    const upperColorLimit = 195;
+    const lowerColorLimit = 55;
+
+    const amountOfGroups = buttons.length / 3;
+
+    let assignedButtons = [];
+    let groupColors = new Array(amountOfGroups);
+
+    for (let i = 0; i < amountOfGroups; i++)
+    {
+        groupColors[i] = Math.random() * (upperColorLimit - lowerColorLimit) + lowerColorLimt
+    }
+
+    for (let i = 0; i < buttons.Length; i++)
+    {
+        var unassignedButtons = getUnassignedButtons(assignedButtons);
+    }
 }
 //Pages
 
