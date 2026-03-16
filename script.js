@@ -45,6 +45,54 @@ function MemoryPage()
     const memoryGame = document.getElementById("memoryGame");
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
 
+    let tries = 0;
+    let inTimeout = false;
+    buttons.forEach(AddClickListener);
+
+    function TurnAllButtonsBlack()
+    {
+        for (let i = 0; i < buttons.length; i++)
+        {
+            buttons[i].style.backgroundColor = "rgb(40, 40, 43)";
+        }
+        inTimeout = false;
+    }
+    
+    function AddTry()
+    {
+        tries++;
+        console.log("Added try: " + tries);
+        if (tries >= 3)
+        {
+            
+            inTimeout = true;
+            setTimeout(TurnAllButtonsBlack, 2000);
+
+            tries = 0;
+        }
+    }
+
+    function AddClickListener(button)
+    {
+        button.addEventListener("click", HandleClick);
+    }
+
+    function HandleClick(e)
+    {
+        const button = e.currentTarget;
+
+        if (inTimeout === true)
+        {
+            return null;
+        }
+
+        var index = GetIndexFromItem(button, buttons);
+        var group = buttonsGroup[index];
+        var color = groupColors[group];
+        button.style.backgroundColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
+        AddTry();
+    }
+
     function CreateGroupColors()
     {
         const upperColorLimit = 255;
@@ -141,13 +189,6 @@ function MemoryPage()
     CreateGroupsArray(groupAmount, buttonsGroup);
     AssignGroupsToButtons(groupAmount, buttonsGroup);
 
-    console.log(buttonsGroup);
-    for (let i = 0; i < buttons.length; i++)
-    {
-        let group = buttonsGroup[i];
-        let color = groupColors[group];
-        buttons[i].style.backgroundColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
-    }
 }
 
 //Pages
