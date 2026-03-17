@@ -46,32 +46,69 @@ function MemoryPage()
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
 
     let revealed = new Array(buttons.length);
+
+    for (let i = 0; i < revealed.length; i++)
+    {
+        revealed[i] = false;
+    }
+
     let lastThree = [null, null, null];
     let tries = 0;
     let inTimeout = false;
     buttons.forEach(AddClickListener);
 
+    const groupColors = CreateGroupColors();
+    let groupAmount = new Array(buttons.length / 3);
+    let buttonsGroup = new Array(buttons.length);
+
+    CreateGroupsArray(groupAmount, buttonsGroup);
+    AssignGroupsToButtons(groupAmount, buttonsGroup);
+
     function TurnAllButtonsBlack()
     {
         for (let i = 0; i < buttons.length; i++)
         {
-            buttons[i].style.backgroundColor = "rgb(40, 40, 43)";
+            var index = GetIndexFromItem(buttons[i], buttons);
+
+            if (revealed[index] === false)
+            {
+                buttons[i].style.backgroundColor = "rgb(40, 40, 43)";
+            }
         }
         inTimeout = false;
+    }
+
+    function IsButtonInLastTries(button)
+    {
+        for (let i = 0; i < lastThree.length; i++)
+        {
+            if (button === lastThree[i])
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
     
     function AddTry(button)
     {
         lastThree[tries] = button;
-
         tries++;
         console.log("Added try: " + tries);
         if (tries >= 3)
         {
-            
-            if (GetGroupFromButton[lastThree[0]] === GetGroupFromButton[lastThree[1]] === GetGroupFromButton[lastThree[2]])
+            if (GetGroupFromButton(lastThree[0]) === GetGroupFromButton(lastThree[1]) && GetGroupFromButton(lastThree[2]) === GetGroupFromButton(lastThree[0]))
             {
+                var firstButton = lastThree[0];
+                var secondButton = lastThree[1];
+                var thirdButton = lastThree[2];
 
+                console.log("Good");
+
+                revealed[GetIndexFromItem(firstButton, buttons)] = true;
+                revealed[GetIndexFromItem(secondButton, buttons)] = true;
+                revealed[GetIndexFromItem(thirdButton, buttons)] = true;
             }
             else
             {
@@ -79,7 +116,9 @@ function MemoryPage()
                 setTimeout(TurnAllButtonsBlack, 2000);
             }
             
-
+            lastThree[0] = null;
+            lastThree[1] = null;
+            lastThree[2] = null;
             tries = 0;
         }
     }
@@ -92,13 +131,14 @@ function MemoryPage()
     function HandleClick(e)
     {
         const button = e.currentTarget;
+        var index = GetIndexFromItem(button, buttons);
 
-        if (inTimeout === true)
+        if (inTimeout === true || revealed[index] === true || IsButtonInLastTries(button) === true)
         {
             return null;
         }
 
-        var index = GetIndexFromItem(button, buttons);
+        
         var group = buttonsGroup[index];
         var color = groupColors[group];
         button.style.backgroundColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
@@ -194,19 +234,13 @@ function MemoryPage()
         }
     }
 
-    function GetGroupFromButton(button, buttonsGroup)
+    function GetGroupFromButton(button)
     {
-        let index = GetIndexFromItem(button, buttons);
 
+        let index = GetIndexFromItem(button, buttons);
+        console.log(index);
         return buttonsGroup[index];
     }
-
-    const groupColors = CreateGroupColors();
-    let groupAmount = new Array(buttons.length / 3);
-    let buttonsGroup = new Array(buttons.length);
-
-    CreateGroupsArray(groupAmount, buttonsGroup);
-    AssignGroupsToButtons(groupAmount, buttonsGroup);
 
 }
 
