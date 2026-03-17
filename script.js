@@ -45,6 +45,8 @@ function MemoryPage()
     const memoryGame = document.getElementById("memoryGame");
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
 
+    let revealed = new Array(buttons.length);
+    let lastThree = [null, null, null];
     let tries = 0;
     let inTimeout = false;
     buttons.forEach(AddClickListener);
@@ -58,15 +60,25 @@ function MemoryPage()
         inTimeout = false;
     }
     
-    function AddTry()
+    function AddTry(button)
     {
+        lastThree[tries] = button;
+
         tries++;
         console.log("Added try: " + tries);
         if (tries >= 3)
         {
             
-            inTimeout = true;
-            setTimeout(TurnAllButtonsBlack, 2000);
+            if (GetGroupFromButton[lastThree[0]] === GetGroupFromButton[lastThree[1]] === GetGroupFromButton[lastThree[2]])
+            {
+
+            }
+            else
+            {
+                inTimeout = true;
+                setTimeout(TurnAllButtonsBlack, 2000);
+            }
+            
 
             tries = 0;
         }
@@ -90,7 +102,7 @@ function MemoryPage()
         var group = buttonsGroup[index];
         var color = groupColors[group];
         button.style.backgroundColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
-        AddTry();
+        AddTry(button);
     }
 
     function CreateGroupColors()
@@ -180,6 +192,13 @@ function MemoryPage()
                 console.log('Assigned Button Number ' + index + ' to group ' + group + '. Group Amount now: ' + groupAmount[group]);
             }
         }
+    }
+
+    function GetGroupFromButton(button, buttonsGroup)
+    {
+        let index = GetIndexFromItem(button, buttons);
+
+        return buttonsGroup[index];
     }
 
     const groupColors = CreateGroupColors();
