@@ -7,6 +7,7 @@
       <link rel="stylesheet" href="override.css">
       <link rel="stylesheet" href="style.css">
       <script src="script.js" defer></script>
+      <link rel="icon" type="image/png" href="images/atomic.png">
   </head>
   <body>
       <nav class="navbar navbar-expand-lg bs-nav sticky-top" data-bs-theme="dark">
@@ -38,12 +39,25 @@
               <div class="col-4"></div>
               <div class="col-4 text-start px-3 pt-5">
                   <h2>Quantum Memory:</h2>
-                  <p>Quantum memory is a parody of memory, which puts it's own twists into the classic card game.
-                    Unlike normal memory, quantum memory requires you to find three identical cards (qubits in our case) to reveal them.
-                    However, this isn't the only thing that differentiates it from the original concept.
-                    There are also additional powerups that exist, allowing you to utilize them to beat the game.
+                  <pre>
+                    Rules of the Game:
+Quantum memory is a parody of memory, which puts it's own twists into the classic card game.
+Unlike normal memory, quantum memory requires you to find three identical cards (qubits in our case) to reveal them.
+However, this isn't the only thing that differentiates it from the original concept.
+There are also additional powerups that exist, allowing you to utilize them to beat the game.
 
+The game is designed to be a fun and interactive way to learn about quantum computing concepts, such as superposition and entanglement.
+By playing the game, players can gain a better understanding of how quantum computers work and the unique properties of qubits.
+
+                  </pre>
+
+                  <p>
+                    Quantum Entanglement(Hard Mode):
                   </p>
+                  <button disabled style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px;" onclick="toggleEntanglement()">
+                    Toggle Entanglement: 
+                    On
+                  </button>
               </div>
               <div class="col-4"></div>
           </div>
