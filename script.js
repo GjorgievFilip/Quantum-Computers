@@ -77,6 +77,7 @@ function MemoryPage()
 
             if (revealed[index] === false)
             {
+                SetTextOfButton("", buttons[i])
                 buttons[i].style.backgroundColor = "rgb(40, 40, 43)";
             }
         }
@@ -130,7 +131,7 @@ function MemoryPage()
 
     function AddClickListener(button)
     {
-        SetTextOfButton("I'm a qubit", button)
+        SetTextOfButton("0/1", button)
         button.addEventListener("click", HandleClick);
     }
 

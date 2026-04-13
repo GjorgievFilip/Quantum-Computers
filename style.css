@@ -459,6 +459,8 @@ IMAGES
     border-radius: 200px;
     border-color: #131314;
     border-width: 4px;
+    font-size: 400%;
+    color:#e7e3e3;
 }
 
 #memoryGame
