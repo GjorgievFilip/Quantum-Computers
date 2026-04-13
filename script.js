@@ -64,6 +64,11 @@ function MemoryPage()
     CreateGroupsArray(groupAmount, buttonsGroup);
     AssignGroupsToButtons(groupAmount, buttonsGroup);
 
+    function SetTextOfButton(text, button)
+    {
+        button.textContent = text;
+    }
+
     function TurnAllButtonsBlack()
     {
         for (let i = 0; i < buttons.length; i++)
@@ -125,6 +130,7 @@ function MemoryPage()
 
     function AddClickListener(button)
     {
+        SetTextOfButton("I'm a qubit", button)
         button.addEventListener("click", HandleClick);
     }
 
