@@ -61,12 +61,30 @@ function MemoryPage()
     let groupAmount = new Array(buttons.length / 3);
     let buttonsGroup = new Array(buttons.length);
 
+    //For states
+    const states = ["0", "1", "/"];
+    let groupsCurrentState = new Array(buttons.length / 3);
+    let buttonsState = new Array(buttons.length);
+
     CreateGroupsArray(groupAmount, buttonsGroup);
     AssignGroupsToButtons(groupAmount, buttonsGroup);
+    AssignStatesToButtons();
 
     function SetTextOfButton(text, button)
     {
         button.textContent = text;
+    }
+
+    function AssignStatesToButtons()
+    {
+        for (let i = 0; i < buttons.length; i++)
+        {
+            let group = buttonsGroup[i];
+            let groupCurrentState = groupsCurrentState[group];
+            console.log(groupCurrentState);
+            buttonsState[i] = states[groupCurrentState];
+            groupsCurrentState[group]++;
+        }
     }
 
     function TurnAllButtonsBlack()
@@ -131,7 +149,6 @@ function MemoryPage()
 
     function AddClickListener(button)
     {
-        SetTextOfButton("0/1", button)
         button.addEventListener("click", HandleClick);
     }
 
@@ -148,6 +165,8 @@ function MemoryPage()
         
         var group = buttonsGroup[index];
         var color = groupColors[group];
+        console.log(buttonsState);
+        SetTextOfButton(buttonsState[index], button);
         button.style.backgroundColor = "rgb(" + color[0] + ", " + color[1] + ", " + color[2] + ")";
         AddTry(button);
     }
@@ -181,8 +200,13 @@ function MemoryPage()
         }
 
         for (let i = 0; i < groupAmount.length; i++)
-        {;
+        {
             groupAmount[i] = 0;
+        }
+
+        for (let i = 0; i < groupsCurrentState.length; i++)
+        {
+            groupsCurrentState[i] = 0;
         }
 
     }
