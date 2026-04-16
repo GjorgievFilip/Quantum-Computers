@@ -137,7 +137,7 @@ function MemoryPage()
             else
             {
                 inTimeout = true;
-                setTimeout(TurnAllButtonsBlack, 2000);
+                setTimeout(TurnAllButtonsBlack, 1500);
             }
             
             lastThree[0] = null;
