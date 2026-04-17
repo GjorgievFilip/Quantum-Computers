@@ -30,6 +30,7 @@
 
 .navbar
 {
+  justify-content: center;
   --bs-navbar-padding-y: 0px;
   background-color: #cbcaca;
 }
