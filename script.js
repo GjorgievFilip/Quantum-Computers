@@ -62,7 +62,7 @@ function MemoryPage()
     let buttonsGroup = new Array(buttons.length);
 
     //For states
-    const states = ["0", "1", "/"];
+    const states = ["0", "1", "*"];
     let groupsCurrentState = new Array(buttons.length / 3);
     let buttonsState = new Array(buttons.length);
 
