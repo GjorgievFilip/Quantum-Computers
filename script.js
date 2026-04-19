@@ -44,6 +44,9 @@ function MemoryPage()
 
     const memoryGame = document.getElementById("memoryGame");
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
+    const triesLabel = document.getElementById("triesLabel");
+
+    let totalTries = 0;
 
     let revealed = new Array(buttons.length);
 
@@ -119,6 +122,8 @@ function MemoryPage()
     {
         lastThree[tries] = button;
         tries++;
+        totalTries++
+        triesLabel.textContent = "Tries: " + totalTries;
         console.log("Added try: " + tries);
         if (tries >= 3)
         {
