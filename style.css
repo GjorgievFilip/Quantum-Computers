@@ -451,6 +451,12 @@ IMAGES
     max-width: 50%;
 }
 
+.gray-border
+{
+    border-style: solid;
+    border-width: 4px;
+    border-color:#8c8c90;
+}
 .qubitGroup
 {
     width: 200px;
@@ -473,4 +479,10 @@ IMAGES
     position: relative;
     transform: translateX(-50%);
     margin-bottom: 56px;
+}
+
+#triesLabel
+{
+    font-size: 275%;
+    transform: translateY(14%);
 }
