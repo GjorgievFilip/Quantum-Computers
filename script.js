@@ -178,7 +178,7 @@ function MemoryPage()
 
     function CreateGroupColors()
     {
-        const upperColorLimit = 255;
+        const upperColorLimit = 205;
         const lowerColorLimit = 5;
         const amountOfGroups = buttons.length / 3;
         let groupColors = new Array(amountOfGroups);
