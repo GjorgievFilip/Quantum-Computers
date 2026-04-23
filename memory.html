@@ -35,12 +35,12 @@
             </nav>
 
       <main>
-          <div class="row height-xxl bg-primary mb-2">
+          <div class="row height-lg bg-primary">
               <div class="col-4"></div>
               <div class="col-4 text-start px-3 pt-5">
                   <h2>Quantum Memory:</h2>
                   <pre>
-                    Rules of the Game:
+                    <h6>Rules of the Game:
 Quantum memory is a parody of memory, which puts it's own twists into the classic card game.
 Unlike normal memory, quantum memory requires you to find three identical cards (qubits in our case) to reveal them.
 However, this isn't the only thing that differentiates it from the original concept.
@@ -48,36 +48,35 @@ There are also additional powerups that exist, allowing you to utilize them to b
 
 The game is designed to be a fun and interactive way to learn about quantum computing concepts, such as superposition and entanglement.
 By playing the game, players can gain a better understanding of how quantum computers work and the unique properties of qubits.
-
+</h6>
                   </pre>
 
-                  <p>
-                    Quantum Entanglement:
-                  </p>
-                  <button disabled style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px;" onclick="toggleEntanglement()">
-                    Toggle Entanglement: 
-                    On
-                  </button>
-                  <a href="memory.html">
-                    <button style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px;" href="memory.html">
-                    Reset Game 
-                  </button>
-                  </a>
+                  
               </div>
               <div class="col-4"></div>
           </div>
 
           <div class="row height-sm mb-4">
-            <div class="col-4"></div>
-            <div class="col-4 text-center bg-secondary rounded gray-border">
+            <div class="col-2"></div>
+            <div class="col-8 text-center bg-secondary rounded gray-border d-inline-flex gap-4 px-5 shadow-lg">
+              <button disabled style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; height:50%; position: relative; top:23%" onclick="toggleEntanglement()">
+                    Toggle Entanglement: 
+                    Off
+              </button>
+
+              <a href="memory.html">
+                    <button style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; position: relative; top:24%" href="memory.html">
+                    Reset Game 
+                  </button>
+                  </a>
               <p id="triesLabel">Tries: 0</p>
             </div>
-            <div class="col-4"></div>
+            <div class="col-2"></div>
             
           </div>
 
 
-          <div id="memoryGame" class="bg-secondary rounded p-5 d-flex gap-4 flex-wrap">
+          <div id="memoryGame" class="bg-secondary rounded p-5 d-flex gap-4 flex-wrap shadow-lg">
             <button class="qubitGroup"></button>
             <button class="qubitGroup"></button>
             <button class="qubitGroup"></button>
