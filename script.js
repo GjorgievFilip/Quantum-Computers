@@ -40,38 +40,54 @@ function GalleryPage()
 
 function MemoryPage()
 {
-    console.log("Memory Page")
-
+    //Constants
+    const states = ["0", "1", "( )"];
     const memoryGame = document.getElementById("memoryGame");
     const buttons = memoryGame.querySelectorAll(".qubitGroup");
     const triesLabel = document.getElementById("triesLabel");
-
-    let totalTries = 0;
-
-    let revealed = new Array(buttons.length);
-
-    for (let i = 0; i < revealed.length; i++)
-    {
-        revealed[i] = false;
-    }
-
-    let lastThree = [null, null, null];
-    let tries = 0;
-    let inTimeout = false;
-    buttons.forEach(AddClickListener);
-
     const groupColors = CreateGroupColors();
-    let groupAmount = new Array(buttons.length / 3);
-    let buttonsGroup = new Array(buttons.length);
+    const minimumColorDistance = 20;
 
-    //For states
-    const states = ["0", "1", "*"];
-    let groupsCurrentState = new Array(buttons.length / 3);
-    let buttonsState = new Array(buttons.length);
+    //Variables
+    let totalTries; //Counts the amount of tries in a game
+    let revealed; //A matrix that shows which qubits have already been revealed
+    let lastThree; //Array that holds the last 3 buttons that have been clicked
+    let tries; //Counts the amount of tries before the last three qubits get evaluated (3)
+    let inTimeout; //Boolean that defines if the game is in a timeout
+    let groupAmount; //Array that counts how many qubits each group already has
+    let buttonsGroup; //Array that defines to which group each button belongs
+    let groupsCurrentState; //Array used at the start to define which state is next in the group
+    let buttonsState; //Array that lets you know which state each button has
+    let gameCount = 0;
+    
+    document.getElementById("resetGameButton").addEventListener("click", StartGame);
+    StartGame();
 
-    CreateGroupsArray(groupAmount, buttonsGroup);
-    AssignGroupsToButtons(groupAmount, buttonsGroup);
-    AssignStatesToButtons();
+    function StartGame()
+    {
+        gameCount++;
+        totalTries = 0;
+        lastThree = [null, null, null];
+        tries = 0;
+        inTimeout = false;
+        revealed = new Array(buttons.length);
+        groupAmount = new Array(buttons.length / 3)
+        buttonsGroup = new Array(buttons.length);
+        groupsCurrentState = new Array(buttons.length / 3)
+        buttonsState = new Array(buttons.length);
+
+        for (let i = 0; i < revealed.length; i++)
+        {
+            revealed[i] = false;
+        }
+
+        triesLabel.textContent = "Tries: 0"
+        buttons.forEach(AddClickListener); 
+        CreateGroupsArray(groupAmount, buttonsGroup);
+        AssignGroupsToButtons(groupAmount, buttonsGroup);
+        AssignStatesToButtons();
+        TurnAllButtonsBlack();
+    }
 
     function SetTextOfButton(text, button)
     {
@@ -84,7 +100,6 @@ function MemoryPage()
         {
             let group = buttonsGroup[i];
             let groupCurrentState = groupsCurrentState[group];
-            console.log(groupCurrentState);
             buttonsState[i] = states[groupCurrentState];
             groupsCurrentState[group]++;
         }
@@ -176,21 +191,54 @@ function MemoryPage()
         AddTry(button);
     }
 
+    function GroupColorHasContrastToOthers(i, groupColorsArray)
+    {
+        const targetGroupColor = groupColorsArray[i];
+
+        for (let iteration = 0; iteration < groupColorsArray.length ; iteration++)
+        {
+            if (iteration != i && groupColorsArray[iteration] != null)
+            {
+                const redDistance = targetGroupColor[0] - groupColorsArray[iteration][0];
+                const greenDistance = targetGroupColor[1] - groupColorsArray[iteration][1];
+                const blueDistance = targetGroupColor[2] - groupColorsArray[iteration][2];
+
+                const distance = (redDistance+greenDistance+blueDistance);
+                
+                if (Math.sqrt(redDistance*redDistance+greenDistance*greenDistance+blueDistance*blueDistance) < 40)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
     function CreateGroupColors()
     {
         const upperColorLimit = 205;
         const lowerColorLimit = 5;
         const amountOfGroups = buttons.length / 3;
         let groupColors = new Array(amountOfGroups);
-
+        let hasContrast = false;
+        console.log(amountOfGroups);
         for (let i = 0; i < amountOfGroups; i++)
         {
-            groupColors[i] = [0, 0, 0];
-
-            for (let j = 0; j < groupColors.length; j++)
+            hasContrast = true;
+            while (hasContrast)
             {
-                groupColors[i][j] = Math.random() * (upperColorLimit - lowerColorLimit) + lowerColorLimit;
+                groupColors[i] = [0, 0, 0];
+
+                for (let j = 0; j < groupColors.length; j++)
+                {
+                    groupColors[i][j] = Math.random() * (upperColorLimit - lowerColorLimit) + lowerColorLimit;
+                }
+
+                console.log(groupColors[i]);
+                hasContrast = !GroupColorHasContrastToOthers(i, groupColors);
             }
+            
         }
 
         return groupColors;

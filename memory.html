@@ -61,25 +61,25 @@ By playing the game, players can gain a better understanding of how quantum comp
             <div class="col-2"></div>
             <div class="col-8 text-center bg-secondary rounded gray-border d-inline-flex gap-4 px-5 shadow-lg">
               <button id="entanglementBtn" style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; height:50%; position: relative; top:23%">
-    Toggle Entanglement: Off
-</button>
+                Toggle Entanglement: Off
+              </button>
 
-<script>
-    const button = document.getElementById("entanglementBtn");
-    
-    function myFunction() {
-        if (button.innerHTML === "Toggle Entanglement: Off") {
-            button.innerHTML = "Toggle Entanglement: On";
-        } else {
-            button.innerHTML = "Toggle Entanglement: Off";
-        }
-    }
-    
-    button.addEventListener("click", myFunction);
-</script>
+            <script>
+                const button = document.getElementById("entanglementBtn");
+                
+                function myFunction() {
+                    if (button.innerHTML === "Toggle Entanglement: Off") {
+                        button.innerHTML = "Toggle Entanglement: On";
+                    } else {
+                        button.innerHTML = "Toggle Entanglement: Off";
+                    }
+                }
+                
+                button.addEventListener("click", myFunction);
+            </script>
 
-              <a href="memory.html">
-                    <button style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; position: relative; top:24%" href="memory.html">
+              <a>
+                <button id="resetGameButton" style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; position: relative; top:24%" href="memory.html">
                     Reset Game 
                   </button>
                   </a>
