@@ -481,8 +481,9 @@ IMAGES
     margin-bottom: 56px;
 }
 
-#triesLabel
+#triesLabel, #highscoreLabel
 {
     font-size: 275%;
     transform: translateY(14%);
 }
+
