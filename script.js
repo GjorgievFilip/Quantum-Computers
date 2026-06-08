@@ -1,3 +1,5 @@
+
+
 //Constants
 const path = window.location.pathname;
 
@@ -38,7 +40,7 @@ function GalleryPage()
     console.log("Gallery Page");
 }
 
-function MemoryPage()
+async function MemoryPage()
 {
     //Constants
     const states = ["0", "1", "( )"];
@@ -47,6 +49,7 @@ function MemoryPage()
     const triesLabel = document.getElementById("triesLabel");
     const groupColors = CreateGroupColors();
     const minimumColorDistance = 20;
+    const idLabel = document.getElementById("idLabel");
 
     //Variables
     let totalTries; //Counts the amount of tries in a game
@@ -59,9 +62,48 @@ function MemoryPage()
     let groupsCurrentState; //Array used at the start to define which state is next in the group
     let buttonsState; //Array that lets you know which state each button has
     let gameCount = 0;
+    let cookies = document.cookie;
     
     document.getElementById("resetGameButton").addEventListener("click", StartGame);
     StartGame();
+    const id = await GetId();
+
+    async function GetId()
+    {
+        if (localStorage.getItem("id") !== null)
+        {
+            const id = localStorage.getItem("id");
+            console.log("Able to get ID from local storage: ", id);
+            idLabel.textContent = "ID: " + id;
+            return parseInt(localStorage.getItem("id"));
+        }
+        else
+        {
+            console.log("Unable to get ID from local storage");
+            //IGNORE THIS PART im doing smth else
+            /*
+            const res = await fetch("http://localhost:3000/users");
+            const users = await res.json();
+
+            let newId = 1;
+            console.log(users);
+
+            while (users.includes(newId))
+            {
+                newId++;
+            }
+
+            
+
+            document.cookie = "id=" + toString(newId);
+
+            return newId;
+            */
+            return 3;
+        }
+
+        
+    }
 
     function StartGame()
     {
