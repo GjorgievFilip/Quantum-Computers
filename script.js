@@ -62,23 +62,22 @@ async function MemoryPage()
     let groupsCurrentState; //Array used at the start to define which state is next in the group
     let buttonsState; //Array that lets you know which state each button has
     let gameCount = 0;
+
     let cookies = document.cookie;
-    
+    let entangelment = false; //Switch for entangelment on/off
+
     document.getElementById("resetGameButton").addEventListener("click", StartGame);
     StartGame();
     const id = await GetId();
 
-    async function GetId()
-    {
-        if (localStorage.getItem("id") !== null)
-        {
+    async function GetId() {
+        if (localStorage.getItem("id") !== null) {
             const id = localStorage.getItem("id");
             console.log("Able to get ID from local storage: ", id);
             idLabel.textContent = "ID: " + id;
             return parseInt(localStorage.getItem("id"));
         }
-        else
-        {
+        else {
             console.log("Unable to get ID from local storage");
 
             const response = await fetch("http://localhost:3050", {
@@ -103,13 +102,7 @@ async function MemoryPage()
         
     }
 
-    function IDReceived(idNumber)
-    {
-
-    }
-
-    function StartGame()
-    {
+    function StartGame() {
         gameCount++;
         totalTries = 0;
         lastThree = [null, null, null];
@@ -121,28 +114,24 @@ async function MemoryPage()
         groupsCurrentState = new Array(buttons.length / 3)
         buttonsState = new Array(buttons.length);
 
-        for (let i = 0; i < revealed.length; i++)
-        {
+        for (let i = 0; i < revealed.length; i++) {
             revealed[i] = false;
         }
 
         triesLabel.textContent = "Tries: 0"
-        buttons.forEach(AddClickListener); 
+        buttons.forEach(AddClickListener);
         CreateGroupsArray(groupAmount, buttonsGroup);
         AssignGroupsToButtons(groupAmount, buttonsGroup);
         AssignStatesToButtons();
         TurnAllButtonsBlack();
     }
 
-    function SetTextOfButton(text, button)
-    {
+    function SetTextOfButton(text, button) {
         button.textContent = text;
     }
 
-    function AssignStatesToButtons()
-    {
-        for (let i = 0; i < buttons.length; i++)
-        {
+    function AssignStatesToButtons() {
+        for (let i = 0; i < buttons.length; i++) {
             let group = buttonsGroup[i];
             let groupCurrentState = groupsCurrentState[group];
             buttonsState[i] = states[groupCurrentState];
@@ -150,14 +139,11 @@ async function MemoryPage()
         }
     }
 
-    function TurnAllButtonsBlack()
-    {
-        for (let i = 0; i < buttons.length; i++)
-        {
+    function TurnAllButtonsBlack() {
+        for (let i = 0; i < buttons.length; i++) {
             var index = GetIndexFromItem(buttons[i], buttons);
 
-            if (revealed[index] === false)
-            {
+            if (revealed[index] === false) {
                 SetTextOfButton("", buttons[i])
                 buttons[i].style.backgroundColor = "rgb(40, 40, 43)";
             }
@@ -165,30 +151,24 @@ async function MemoryPage()
         inTimeout = false;
     }
 
-    function IsButtonInLastTries(button)
-    {
-        for (let i = 0; i < lastThree.length; i++)
-        {
-            if (button === lastThree[i])
-            {
+    function IsButtonInLastTries(button) {
+        for (let i = 0; i < lastThree.length; i++) {
+            if (button === lastThree[i]) {
                 return true;
             }
         }
 
         return false;
     }
-    
-    function AddTry(button)
-    {
+
+    function AddTry(button) {
         lastThree[tries] = button;
         tries++;
         totalTries++
         triesLabel.textContent = "Tries: " + totalTries;
         console.log("Added try: " + tries);
-        if (tries >= 3)
-        {
-            if (GetGroupFromButton(lastThree[0]) === GetGroupFromButton(lastThree[1]) && GetGroupFromButton(lastThree[2]) === GetGroupFromButton(lastThree[0]))
-            {
+        if (tries >= 3) {
+            if (GetGroupFromButton(lastThree[0]) === GetGroupFromButton(lastThree[1]) && GetGroupFromButton(lastThree[2]) === GetGroupFromButton(lastThree[0])) {
                 var firstButton = lastThree[0];
                 var secondButton = lastThree[1];
                 var thirdButton = lastThree[2];
@@ -199,12 +179,11 @@ async function MemoryPage()
                 revealed[GetIndexFromItem(secondButton, buttons)] = true;
                 revealed[GetIndexFromItem(thirdButton, buttons)] = true;
             }
-            else
-            {
+            else {
                 inTimeout = true;
                 setTimeout(TurnAllButtonsBlack, 1500);
             }
-            
+
             lastThree[0] = null;
             lastThree[1] = null;
             lastThree[2] = null;
@@ -212,22 +191,19 @@ async function MemoryPage()
         }
     }
 
-    function AddClickListener(button)
-    {
+    function AddClickListener(button) {
         button.addEventListener("click", HandleClick);
     }
 
-    function HandleClick(e)
-    {
+    function HandleClick(e) {
         const button = e.currentTarget;
         var index = GetIndexFromItem(button, buttons);
 
-        if (inTimeout === true || revealed[index] === true || IsButtonInLastTries(button) === true)
-        {
+        if (inTimeout === true || revealed[index] === true || IsButtonInLastTries(button) === true) {
             return null;
         }
 
-        
+
         var group = buttonsGroup[index];
         var color = groupColors[group];
         console.log(buttonsState);
@@ -236,22 +212,18 @@ async function MemoryPage()
         AddTry(button);
     }
 
-    function GroupColorHasContrastToOthers(i, groupColorsArray)
-    {
+    function GroupColorHasContrastToOthers(i, groupColorsArray) {
         const targetGroupColor = groupColorsArray[i];
 
-        for (let iteration = 0; iteration < groupColorsArray.length ; iteration++)
-        {
-            if (iteration != i && groupColorsArray[iteration] != null)
-            {
+        for (let iteration = 0; iteration < groupColorsArray.length; iteration++) {
+            if (iteration != i && groupColorsArray[iteration] != null) {
                 const redDistance = targetGroupColor[0] - groupColorsArray[iteration][0];
                 const greenDistance = targetGroupColor[1] - groupColorsArray[iteration][1];
                 const blueDistance = targetGroupColor[2] - groupColorsArray[iteration][2];
 
-                const distance = (redDistance+greenDistance+blueDistance);
-                
-                if (Math.sqrt(redDistance*redDistance+greenDistance*greenDistance+blueDistance*blueDistance) < 40)
-                {
+                const distance = (redDistance + greenDistance + blueDistance);
+
+                if (Math.sqrt(redDistance * redDistance + greenDistance * greenDistance + blueDistance * blueDistance) < 40) {
                     return false;
                 }
             }
@@ -260,63 +232,52 @@ async function MemoryPage()
         return true;
     }
 
-    function CreateGroupColors()
-    {
+    function CreateGroupColors() {
         const upperColorLimit = 205;
         const lowerColorLimit = 5;
         const amountOfGroups = buttons.length / 3;
         let groupColors = new Array(amountOfGroups);
         let hasContrast = false;
         console.log(amountOfGroups);
-        for (let i = 0; i < amountOfGroups; i++)
-        {
+        for (let i = 0; i < amountOfGroups; i++) {
             hasContrast = true;
-            while (hasContrast)
-            {
+            while (hasContrast) {
                 groupColors[i] = [0, 0, 0];
 
-                for (let j = 0; j < groupColors.length; j++)
-                {
+                for (let j = 0; j < groupColors.length; j++) {
                     groupColors[i][j] = Math.random() * (upperColorLimit - lowerColorLimit) + lowerColorLimit;
                 }
 
                 console.log(groupColors[i]);
                 hasContrast = !GroupColorHasContrastToOthers(i, groupColors);
             }
-            
+
         }
 
         return groupColors;
     }
 
-    function CreateGroupsArray(groupAmount, buttonsGroup)
-    {
+    function CreateGroupsArray(groupAmount, buttonsGroup) {
 
-        for (let i = 0; i < buttonsGroup.length; i++)
-        {
+        for (let i = 0; i < buttonsGroup.length; i++) {
             buttonsGroup[i] = -1;
         }
 
-        for (let i = 0; i < groupAmount.length; i++)
-        {
+        for (let i = 0; i < groupAmount.length; i++) {
             groupAmount[i] = 0;
         }
 
-        for (let i = 0; i < groupsCurrentState.length; i++)
-        {
+        for (let i = 0; i < groupsCurrentState.length; i++) {
             groupsCurrentState[i] = 0;
         }
 
     }
 
-    function GetAllUnassignedButtons(buttonsGroup)
-    {
+    function GetAllUnassignedButtons(buttonsGroup) {
         let unassignedButtonArray = new Array();
 
-        for (let i = 0; i < buttons.length; i++)
-        {
-            if (buttonsGroup[i] === -1)
-            {
+        for (let i = 0; i < buttons.length; i++) {
+            if (buttonsGroup[i] === -1) {
                 unassignedButtonArray.push(buttons[i]);
             }
         }
@@ -324,12 +285,9 @@ async function MemoryPage()
         return unassignedButtonArray;
     }
 
-    function GetIndexFromItem(item, array)
-    {
-        for (let i = 0; i < array.length; i++)
-        {
-            if (array[i] == item)
-            {
+    function GetIndexFromItem(item, array) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == item) {
                 return i;
             }
         }
@@ -337,21 +295,17 @@ async function MemoryPage()
         return -1;
     }
 
-    function GetRandomUnassignedButton(buttonsGroup)
-    {
+    function GetRandomUnassignedButton(buttonsGroup) {
         let unassignedButtons = GetAllUnassignedButtons(buttonsGroup);
         var button = unassignedButtons[Math.floor(Math.random() * unassignedButtons.length)];
 
         return button;
     }
 
-    function AssignGroupsToButtons(groupAmount, buttonsGroup)
-    {
-        for (let group = 0; group < groupAmount.length; group++)
-        {
+    function AssignGroupsToButtons(groupAmount, buttonsGroup) {
+        for (let group = 0; group < groupAmount.length; group++) {
             console.log(groupAmount);
-            while (groupAmount[group] < 3)
-            {
+            while (groupAmount[group] < 3) {
                 //Get a random button
                 var button = GetRandomUnassignedButton(buttonsGroup);
                 let index = GetIndexFromItem(button, buttons);
@@ -363,14 +317,12 @@ async function MemoryPage()
         }
     }
 
-    function GetGroupFromButton(button)
-    {
+    function GetGroupFromButton(button) {
 
         let index = GetIndexFromItem(button, buttons);
         console.log(index);
         return buttonsGroup[index];
     }
-
 }
 
 //Pages

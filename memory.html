@@ -12,130 +12,142 @@
   <body>
       <nav class="navbar navbar-expand-lg bs-nav sticky-top" data-bs-theme="dark">
           <ul class="navbar-nav gap-2">
-                  <li class="nav-item">
-                      <a class="nav-link" href="index.html">Quantum Computers
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="applications.html">Applications</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="power.html">Power</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="security.html">Security</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="models.html">Models</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link active" href="memory.html">Memory</a>
-                    </li>
-                  </ul>
-            </nav>
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">
+                      Quantum Computers
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="applications.html">Applications</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="power.html">Power</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="security.html">Security</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="models.html">Models</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="memory.html">Memory</a>
+              </li>
+          </ul>
+      </nav>
 
       <main>
-        <div class="img-lasers height-xxl mb-5 align-items-center justify-content-center d-flex">
-            <div class="container-sm shadow-lg text-center frosted py-5">
-              <h1 class="text-color-white">Memory Game</h1> <br> <h2 class="text-color-white"></h2>
-            </div>
-          </div>
-
-          <div class="row height-lg bg-primary">
-              <div class="col-4"></div>
-              <div class="col-4 text-start px-3 pt-5">
-                  <h2>Quantum Memory:</h2>
-                  <h5>Get an insight of Quantum Danamics by <a href="https://de.wikipedia.org/wiki/Gamification">Gamification: </a></h5>
-                  <pre>
-                    <h4>Rules of the Game:
-Quantum memory is a parody of memory, which puts it's own twists into the classic card game.
-Unlike normal memory, quantum memory requires you to find three identical cards (qubits in our case) to reveal them.
-However, this isn't the only thing that differentiates it from the original concept.
-There are also additional powerups that exist, allowing you to utilize them to beat the game.
-
-The game is designed to be a fun and interactive way to learn about quantum computing concepts, such as superposition and entanglement.
-By playing the game, players can gain a better understanding of how quantum computers work and the unique properties of qubits.
-</h4>
-                  </pre>
-
-                  
+          <div class="img-lasers height-xxl mb-5 align-items-center justify-content-center d-flex">
+              <div class="container-sm shadow-lg text-center frosted py-5">
+                  <h1 class="text-color-white">Memory Game</h1> <br> <h2 class="text-color-white"></h2>
               </div>
-              <div class="col-4"></div>
+          </div>
+          <div class="row bg-primary py-5">
+              <div class="col-12 col-md-8 mx-auto px-4">
+                  <div class="card border-0 shadow-sm rounded-4 bg-white text-dark p-4">
+
+                      <h2 class="fw-bold mb-2 text-black">Quantum Memory</h2>
+                      <p class="text-muted mb-4">
+                          Get an insight into Quantum Dynamics by
+                          <a href="https://de.wikipedia.org/wiki/Gamification" class="text-decoration-none fw-semibold">Gamification</a>.
+                      </p>
+
+                      <button id="rulesButton" class="btn btn-outline-primary d-flex justify-content-between align-items-center w-100 py-3 px-4 rounded-3 fw-bold"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#rulesCollapse"
+                              aria-expanded="false"
+                              aria-controls="rulesCollapse">
+                          <span>View Rules of the Game</span>
+                          <i class="bi bi-chevron-down"></i>
+                      </button>
+
+                      <div class="collapse" id="rulesCollapse">
+                          <div class="pt-4 text-start">
+                              <p class="lead fw-semibold">Quantum memory is a parody of memory, putting its own twists into the classic card game.</p>
+
+                              <ul class="list-unstyled">
+                                  <li class="mb-3">
+                                      <strong>The Objective:</strong> Unlike normal memory, quantum memory requires you to find <strong>three identical cards</strong> (qubits) to reveal them.
+                                  </li>
+                                  <li class="mb-3">
+                                      <strong>Power-ups:</strong> This isn't the only twist! Additional power-ups exist throughout the game, allowing you to strategically utilize them to win.
+                                  </li>
+                              </ul>
+
+                              <hr class="my-4 text-muted opacity-25">
+
+                              <p class="text-muted small">
+                                  The game is designed to be a fun and interactive way to learn about quantum computing concepts, such as superposition and entanglement. By playing, you will gain a better understanding of how quantum computers work and the unique properties of qubits.
+                              </p>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
           </div>
 
           <div class="row height-sm mb-4">
-            <div class="col-2"></div>
-            <div class="col-8 text-center bg-secondary rounded gray-border d-inline-flex gap-4 px-5 shadow-lg">
-                <button id="entanglementBtn" style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; height:50%; position: relative; top:23%">
-                    Toggle Entanglement: Off
-                </button>
+              <div class="col-2"></div>
+              <div class="col-8 text-center bg-secondary rounded gray-border d-inline-flex gap-4 px-5 shadow-lg">
 
-            <script>
-                const button = document.getElementById("entanglementBtn");
-                
-                function myFunction() {
-                    if (button.innerHTML === "Toggle Entanglement: Off") {
-                        button.innerHTML = "Toggle Entanglement: On";
-                    } else {
-                        button.innerHTML = "Toggle Entanglement: Off";
-                    }
-                }
-                
-                button.addEventListener("click", myFunction);
-            </script>
-
-              <a>
-                <button id="resetGameButton" style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; position: relative; top:24%" href="memory.html">
-                    Reset Game 
+                  <button id="entanglementBtn" style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; height:50%; position: relative; top:23%">
+                      Toggle Entanglement: Off
+                      <script src="Gamemode.js"></script>
                   </button>
+
+                  <a>
+                      <button id="resetGameButton" style="background-color: black; color: white; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 10px; position: relative; top:24%" href="memory.html">
+                          Reset Game
+                      </button>
                   </a>
-              <p id="triesLabel">Tries: 0</p>
-              <p id="highscoreLabel">Highscore: 0</p>
-            </div>
-            <div class="col-2"></div>
-            </div>
+                  <p id="triesLabel">Tries: 0</p>
+                  <p id="highscoreLabel">Highscore: 0</p>
+              </div>
+              <div class="col-2"></div>
+          </div>
 
-            <div class="row height-sm mb-4">
-            <div class="col-2"></div>
-            <div class="col-8 text-center bg-secondary rounded gray-border d-inline-flex gap-4 px-5 shadow-lg">
+          <div class="row height-sm mb-4">
+              <div class="col-2"></div>
+              <div class="col-8 text-center bg-secondary rounded gray-border d-inline-flex gap-4 px-5 shadow-lg">
 
-             
-              <p id="idLabel">ID: </p>
-            </div>
-            <div class="col-2"></div>
+
+                  <p id="idLabel">ID: </p>
+              </div>
+              <div class="col-2"></div>
 
           </div>
 
 
           <div id="memoryGame" class="bg-secondary rounded p-5 d-flex gap-4 flex-wrap shadow-lg">
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
 
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
 
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
-            <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
+              <button class="qubitGroup"></button>
           </div>
       </main>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
