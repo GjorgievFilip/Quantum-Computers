@@ -80,29 +80,32 @@ async function MemoryPage()
         else
         {
             console.log("Unable to get ID from local storage");
-            //IGNORE THIS PART im doing smth else
-            /*
-            const res = await fetch("http://localhost:3000/users");
-            const users = await res.json();
 
-            let newId = 1;
-            console.log(users);
+            const response = await fetch("http://localhost:3050", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    need: "ID"
+                })
+            });
 
-            while (users.includes(newId))
-            {
-                newId++;
-            }
+            const text = await response.json();
 
-            
-
-            document.cookie = "id=" + toString(newId);
-
-            return newId;
-            */
-            return 3;
+            console.log("Status: ", response.status);
+            console.log("Body", text.number);
+            idLabel.textContent = "ID: " + text.number;
+            localStorage.setItem("id", text.number)
+            return text.number;
         }
 
         
+    }
+
+    function IDReceived(idNumber)
+    {
+
     }
 
     function StartGame()

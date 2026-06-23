@@ -3,14 +3,13 @@
     {
       "id": 1,
       "highscore": 200,
-      "name": "Jakob Bachl",
-      "gameId": 1
+      "name": "Jakob Bachl"
     }
   ],
 
-  "users": [
-    1
-  ],
+  "stats": {
+    "highestID": 100
+  },
   
   "$schema": "./node_modules/json-server/schema.json"
 }
